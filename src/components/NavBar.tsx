@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
@@ -11,6 +11,32 @@ export default function NavBar() {
     void import("./CampusMap");
   };
 
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onPointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+      const nav = document.getElementById("main-nav");
+      const menuBtn = document.querySelector(".navbar__menu-btn");
+      if (nav?.contains(target) || menuBtn?.contains(target)) return;
+      setMenuOpen(false);
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [menuOpen]);
+
   return (
     <header className="navbar">
       <div className="navbar__inner">
@@ -20,8 +46,11 @@ export default function NavBar() {
             alt="Brown University seal"
             className="navbar__logo"
           />
-          <div>
-            <span className="navbar__title">Brown Housing Lottery Demystified</span>
+          <div className="navbar__brand-text">
+            <span className="navbar__title navbar__title--full">
+              Brown Housing Lottery Demystified
+            </span>
+            <span className="navbar__title navbar__title--short">Brown Housing</span>
             <span className="navbar__subtitle">Find your next dorm with confidence</span>
           </div>
         </NavLink>
@@ -32,7 +61,7 @@ export default function NavBar() {
           aria-expanded={menuOpen}
           aria-controls="main-nav"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
-          onClick={() => setMenuOpen((o) => !o)}
+          onClick={() => setMenuOpen((open) => !open)}
         >
           <span className="navbar__menu-icon" aria-hidden="true" />
         </button>

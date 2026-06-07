@@ -51,6 +51,11 @@
   font-size: 1.5rem;
   cursor: pointer;
   line-height: 1;
+  min-width: var(--touch-target, 44px);
+  min-height: var(--touch-target, 44px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .compare-modal__grid {
@@ -102,6 +107,33 @@
   background: transparent;
   font-size: var(--text-xs, 0.75rem);
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .compare-modal__overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .compare-modal__dialog {
+    max-height: 92vh;
+    border-radius: 16px 16px 0 0;
+    padding-bottom: var(--safe-bottom);
+  }
+
+  .compare-modal__header {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .compare-modal__grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .compare-modal__remove {
+    min-height: var(--touch-target, 44px);
+    padding: 0.35rem 0.75rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

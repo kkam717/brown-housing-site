@@ -136,11 +136,21 @@
 }
 
 @media (max-width: 768px) {
+  .campus-map {
+    padding: var(--space-page-mobile, 1rem);
+  }
+
   .campus-map__layout {
     grid-template-columns: 1fr;
   }
 
   .campus-map__sidebar {
-    max-height: 200px;
+    max-height: min(35vh, 280px);
+    order: 2;
+  }
+
+  .campus-map__container {
+    height: min(55vh, 480px);
+    order: 1;
   }
 }

@@ -5,6 +5,7 @@
 
 .search-autocomplete input {
   width: 100%;
+  min-height: var(--touch-target, 44px);
   padding: 0.6rem 0.85rem;
   border: 1px solid var(--color-border-input, #ccc);
   border-radius: var(--radius-md, 8px);
@@ -31,6 +32,7 @@
 .search-autocomplete__item {
   display: block;
   width: 100%;
+  min-height: var(--touch-target, 44px);
   padding: 0.6rem 0.85rem;
   border: none;
   background: transparent;

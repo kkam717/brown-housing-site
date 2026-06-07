@@ -144,7 +144,8 @@
   background: var(--color-surface-light, #fff);
   font-size: var(--text-sm, 0.8rem);
   cursor: pointer;
-  min-height: 36px;
+  min-height: var(--touch-target, 44px);
+  min-width: var(--touch-target, 44px);
 }
 
 .dorm-card__favorite.active,
@@ -161,11 +162,14 @@
 @media (max-width: 768px) {
   .dorm-card {
     grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
   }
 
   .dorm-card__image {
     width: 100%;
     height: auto;
+    max-height: 200px;
   }
 
   .dorm-card__grid {
@@ -175,8 +179,16 @@
   .dorm-card__actions {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
+    min-width: 0;
+    gap: 0.5rem;
+  }
+
+  .dorm-card__link {
+    min-height: var(--touch-target, 44px);
+    display: inline-flex;
+    align-items: center;
   }
 }
 

@@ -10,6 +10,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,6 +18,8 @@ body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   color: var(--color-text-body, #222);
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
 }
 
 img {

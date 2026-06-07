@@ -150,12 +150,59 @@
   color: #555;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .listings-page {
+    padding: var(--space-page-mobile, 1rem);
+  }
+
   .listings-page__panel {
     padding: 1rem;
+    border-radius: var(--radius-lg, 12px);
+  }
+
+  .listings-page__panel h1 {
+    font-size: var(--text-xl, 1.5rem);
   }
 
   .listings-page__search {
     flex-direction: column;
+  }
+
+  .listings-page__search button {
+    width: 100%;
+  }
+
+  .listings-page__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .listings-page__sort {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .listings-page__sort select {
+    flex: 1;
+    max-width: 12rem;
+  }
+
+  .listings-page__favorites-toggle {
+    min-height: var(--touch-target, 44px);
+  }
+
+  .listings-page__compare-btn {
+    width: 100%;
+  }
+
+  .listings-page__pagination {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .listings-page__pagination button {
+    flex: 1;
+    min-width: 7rem;
   }
 }

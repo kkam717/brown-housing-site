@@ -93,3 +93,23 @@
   font-weight: 600;
   color: var(--color-surface-dark, #1c1c3a);
 }
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: var(--space-page-mobile, 1rem);
+  }
+
+  .about-page__panel {
+    padding: 1.25rem;
+    border-radius: var(--radius-lg, 12px);
+  }
+
+  .about-page__member img {
+    width: 120px;
+    height: 140px;
+  }
+
+  .about-page__review-actions button {
+    width: 100%;
+  }
+}

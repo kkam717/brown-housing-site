@@ -11,6 +11,7 @@
   align-items: center;
   gap: 0.35rem;
   padding: 0.35rem 0.75rem;
+  min-height: var(--touch-target, 44px);
   background: var(--color-brand-muted, rgba(192, 4, 4, 0.12));
   border: 1px solid var(--color-brand, #c00404);
   border-radius: 999px;
@@ -27,6 +28,7 @@
 
 .filter-chips__clear {
   padding: 0.35rem 0.75rem;
+  min-height: var(--touch-target, 44px);
   background: transparent;
   border: none;
   color: var(--color-text-secondary, #666);

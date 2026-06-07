@@ -6,7 +6,7 @@
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  white-space: nowrap;
+  min-height: var(--touch-target, 44px);
 }
 
 .review-modal__trigger:hover {
@@ -67,7 +67,11 @@
   font-size: 1.5rem;
   cursor: pointer;
   line-height: 1;
-  padding: 0 0.25rem;
+  min-width: var(--touch-target, 44px);
+  min-height: var(--touch-target, 44px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .review-modal__body {
@@ -244,6 +248,42 @@
   font-size: 1rem;
   font-weight: 400;
   resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .review-modal__overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .review-modal__dialog {
+    max-width: none;
+    border-radius: 16px 16px 0 0;
+    max-height: 92vh;
+    padding-bottom: var(--safe-bottom);
+  }
+
+  .review-modal__header {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .review-modal__footer {
+    flex-direction: column-reverse;
+  }
+
+  .review-modal__cancel,
+  .review-modal__submit {
+    width: 100%;
+    min-height: var(--touch-target, 44px);
+  }
+
+  .star-rating__star {
+    min-width: var(--touch-target, 44px);
+    min-height: var(--touch-target, 44px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

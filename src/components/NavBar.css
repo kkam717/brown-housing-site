@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  padding-top: var(--safe-top);
 }
 
 .navbar__inner {
@@ -13,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .navbar__brand {
@@ -22,12 +23,19 @@
   gap: 0.75rem;
   text-decoration: none;
   color: inherit;
+  min-width: 0;
+  flex: 1;
+}
+
+.navbar__brand-text {
+  min-width: 0;
 }
 
 .navbar__logo {
   width: 56px;
   height: 56px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .navbar__title {
@@ -38,6 +46,10 @@
   line-height: 1.2;
 }
 
+.navbar__title--short {
+  display: none;
+}
+
 .navbar__subtitle {
   display: block;
   font-size: 0.8rem;
@@ -46,13 +58,14 @@
 
 .navbar__menu-btn {
   display: none;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: var(--touch-target, 44px);
+  min-height: var(--touch-target, 44px);
   padding: 0.5rem;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-sm, 6px);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .navbar__menu-icon {
@@ -116,6 +129,16 @@
     justify-content: center;
   }
 
+  .navbar__inner {
+    position: relative;
+    padding: 0.65rem var(--space-page-mobile, 1rem);
+  }
+
+  .navbar__logo {
+    width: 44px;
+    height: 44px;
+  }
+
   .navbar__links {
     display: none;
     position: absolute;
@@ -124,7 +147,7 @@
     right: 0;
     flex-direction: column;
     background: var(--color-surface-dark, #1c1c3a);
-    padding: 0.5rem 1rem 1rem;
+    padding: 0.5rem var(--space-page-mobile, 1rem) calc(1rem + var(--safe-bottom));
     border-bottom: 3px solid var(--color-brand, #c00404);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   }
@@ -136,14 +159,17 @@
   .navbar__links a {
     width: 100%;
   }
+}
 
-  .navbar {
-    position: sticky;
+@media (max-width: 480px) {
+  .navbar__title--full,
+  .navbar__subtitle {
+    display: none;
   }
 
-  .navbar__inner {
-    position: relative;
-    flex-wrap: wrap;
+  .navbar__title--short {
+    display: block;
+    font-size: var(--text-base, 1rem);
   }
 }
 
