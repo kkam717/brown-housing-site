@@ -16,7 +16,7 @@ A deployable version of the CS0320 housing search app. Search and filtering run 
 ### Frontend only (local dev)
 
 ```bash
-cd portfolio-site
+cd brown-housing-site
 npm install
 npm run dev
 ```
@@ -72,7 +72,7 @@ Copy [`.env.example`](.env.example):
 1. Connect the same GitHub repo
 2. Build command: `npm run build`
 3. Publish directory: `dist`
-4. Set `VITE_API_URL` to your Render URL (e.g. `https://portfolio-site-api.onrender.com`)
+4. Set `VITE_API_URL` to your Render URL (e.g. `https://brown-housing-site-api.onrender.com`)
 
 ### 4. Keep-alive cron (optional, recommended)
 

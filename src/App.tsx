@@ -50,7 +50,7 @@ function AppRoutes() {
             <a href="/contact">Contact</a>
             {" · "}
             <a
-              href="https://github.com/kiankamshad/portfolio-site"
+              href="https://github.com/kkam717/brown-housing-site"
               target="_blank"
               rel="noopener noreferrer"
             >
