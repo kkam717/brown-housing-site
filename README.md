@@ -65,7 +65,7 @@ Copy [`.env.example`](.env.example):
 1. Push this repo to GitHub
 2. Create a **Web Service** from the repo (or use [`render.yaml`](render.yaml))
 3. Set `DATABASE_URL` and `CORS_ORIGIN` in Render env vars
-4. Deploy — migration runs via `preDeployCommand`
+4. Deploy — migration runs on startup (before the server listens)
 
 ### 3. Frontend (Vercel or Netlify)
 
