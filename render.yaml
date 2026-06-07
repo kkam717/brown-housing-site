@@ -3,7 +3,7 @@ services:
     name: brown-housing-site-api
     runtime: node
     plan: free
-    buildCommand: cd server && npm install && npm run build
+    buildCommand: cd server && npm install --include=dev && npm run build
     startCommand: cd server && node dist/db/migrate.js && npm start
     envVars:
       - key: NODE_ENV
