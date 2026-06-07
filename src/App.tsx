@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { ReviewSyncProvider } from "./context/ReviewSyncContext";
 import { useBackendWarmup } from "./hooks/useBackendWarmup";
 import NavBar from "./components/NavBar";
@@ -13,11 +13,14 @@ import "./App.css";
 
 const CampusMap = lazy(() => import("./components/CampusMap"));
 
+const routerBasename =
+  import.meta.env.BASE_URL === "/" ? undefined : import.meta.env.BASE_URL.replace(/\/$/, "");
+
 function AppRoutes() {
   useBackendWarmup();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <div className="app">
         <a href="#main-content" className="skip-link">
           Skip to main content
@@ -47,7 +50,7 @@ function AppRoutes() {
           </p>
           <p className="app__footer-meta">
             CS0320 project · Built with React + Vite ·{" "}
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
             {" · "}
             <a
               href="https://github.com/kkam717/brown-housing-site"
