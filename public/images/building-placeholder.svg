@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280" role="img" aria-label="Building photo unavailable">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8"/>
+      <stop offset="100%" stop-color="#e8dfd3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="url(#sky)"/>
+  <rect x="120" y="90" width="160" height="130" rx="4" fill="#8b4513"/>
+  <rect x="135" y="105" width="30" height="35" fill="#c4a882"/>
+  <rect x="175" y="105" width="30" height="35" fill="#c4a882"/>
+  <rect x="235" y="105" width="30" height="35" fill="#c4a882"/>
+  <rect x="175" y="165" width="50" height="55" fill="#5c3317"/>
+  <polygon points="200,55 110,95 290,95" fill="#c00404"/>
+  <text x="200" y="245" text-anchor="middle" fill="#666" font-family="system-ui, sans-serif" font-size="13">Photo unavailable</text>
+</svg>

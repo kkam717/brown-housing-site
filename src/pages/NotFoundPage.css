@@ -1,0 +1,38 @@
+.not-found {
+  max-width: var(--max-width-about, 800px);
+  margin: 0 auto;
+  padding: var(--space-page, 1.5rem);
+}
+
+.not-found__panel {
+  background: var(--color-surface-light, #fff);
+  border-radius: var(--radius-xl, 16px);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-panel);
+}
+
+.not-found__panel h1 {
+  margin: 0 0 0.5rem;
+  font-size: 3rem;
+  color: var(--color-brand, #c00404);
+}
+
+.not-found__panel p {
+  margin: 0 0 1.5rem;
+  color: var(--color-text-secondary, #666);
+}
+
+.not-found__link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-brand, #c00404);
+  color: var(--color-text-on-dark, #fff);
+  text-decoration: none;
+  border-radius: var(--radius-sm, 6px);
+  font-weight: 600;
+}
+
+.not-found__link:hover {
+  background: var(--color-brand-hover, #a00303);
+}

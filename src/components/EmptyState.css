@@ -1,0 +1,46 @@
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.empty-state__icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.empty-state__title {
+  margin: 0 0 0.5rem;
+  font-size: var(--text-xl, 1.25rem);
+  color: var(--color-surface-dark, #1c1c3a);
+}
+
+.empty-state__message {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-secondary, #666);
+}
+
+.empty-state__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.empty-state__btn {
+  padding: 0.6rem 1.25rem;
+  background: var(--color-surface-dark, #1c1c3a);
+  color: var(--color-text-on-dark, #fff);
+  border: none;
+  border-radius: var(--radius-sm, 6px);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-state__link {
+  padding: 0.6rem 1.25rem;
+  color: var(--color-brand, #c00404);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--color-brand, #c00404);
+  border-radius: var(--radius-sm, 6px);
+}
